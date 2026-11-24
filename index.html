@@ -23,7 +23,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #090914 url('./3e4df0a6c0091b06a2228c40ecba5d88.gif') center/cover fixed no-repeat;
+  background: #242424 url('./3e4df0a6c0091b06a2228c40ecba5d88.gif') center/cover fixed no-repeat;
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -31,7 +31,7 @@ body {
 header {
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #170b35dd, #35106bdd, #090914dd);
+  background: linear-gradient(135deg, #242424dd, #35106bdd, #242424dd);
 }
 
 h1 {
@@ -54,8 +54,10 @@ p {
 section {
   padding: 45px 20px;
   text-align: center;
-  background: #090914cc;
-  margin: 15px 0;
+  background: rgba(45,45,45,0.88);
+  border: 1px solid rgba(198,154,255,0.3);
+  border-radius: 16px;
+  margin: 15px;
 }
 
 h2 {
@@ -70,7 +72,7 @@ h2 {
 }
 
 .game {
-  background: #191329;
+  background: #303030;
   padding: 20px 30px;
   border: 1px solid #793ac4;
   border-radius: 14px;
@@ -80,7 +82,7 @@ a {
   display: inline-block;
   margin: 10px;
   padding: 15px 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
   transition: .3s ease;
@@ -88,7 +90,7 @@ a {
 
 a:hover {
   transform: scale(1.06);
-  filter: drop-shadow(0 0 10px #bf00ff);
+  filter: brightness(1.2);
 }
 
 .twitch {
@@ -101,11 +103,17 @@ a:hover {
   color: white;
 }
 
+.tiktok {
+  background: #111;
+  color: white;
+  border: 1px solid #fff;
+}
+
 footer {
   padding: 25px;
   color: #ddd;
   text-align: center;
-  background: #090914cc;
+  background: rgba(45,45,45,0.88);
 }
 
 .gif-container {
@@ -142,47 +150,16 @@ footer {
 }
 </style>
 </head>
-/* HOTERYP NEW DESIGN */
 
-body {
-    background-color: #242424;
-    color: #ffffff;
-}
-
-h1, h2, h3 {
-    color: #c69aff;
-    text-shadow: 0 0 12px rgba(198, 154, 255, 0.4);
-}
-
-button, a {
-    transition: 0.3s ease;
-}
-
-a {
-    border-radius: 12px;
-}
-
-a:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-section, .card, .box {
-    background: rgba(45, 45, 45, 0.88);
-    border: 1px solid rgba(198, 154, 255, 0.3);
-    border-radius: 16px;
-    padding: 18px;
-}
-</style>
-</head>
 <body>
+
 <header>
   <h1 class="reveal">HOTERYP</h1>
   <p class="reveal">Добро пожаловать на официальный сайт стримера HOTERYP!</p>
   <div class="reveal">
     <a class="twitch" href="https://twitch.tv/hoteryp">Смотреть на Twitch</a>
     <a class="telegram" href="https://t.me/nixsois_nx">Telegram</a>
-    <a class="tiktok" href="https://www.tiktok.com/@nixsois" target="_blank">TikTok</a>
+    <a class="tiktok" href="https://www.tiktok.com/@nixsois" target="_blank" rel="noopener noreferrer">TikTok</a>
   </div>
 </header>
 
