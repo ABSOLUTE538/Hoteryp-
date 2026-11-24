@@ -90,6 +90,11 @@ footer{padding:25px;color:#777}
   </div>
 </body>
     <script>
+document.querySelectorAll('.reveal').forEach(el => {
+  setTimeout(() => el.classList.add('active'), 200);
+});
+    </script>
+    <script>
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
