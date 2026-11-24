@@ -3,154 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HOTERYP — Twitch Streamer</title>
-<meta name="description" content="HOTERYP — стример Twitch. Смотри трансляции по CS2, Dota 2 и хоррорам!">
+<meta name="description" content="HOTERYP — стример Twitch. CS2, Dota 2 и хорроры!">
 <meta name="google-site-verification" content="kTZqZFm_H7HNj7yG8yIh6IVqU7HaFVdbItEEXgNwFZE">
+<meta name="robots" content="index, follow">
+<meta name="author" content="HOTERYP">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="HOTERYP — Twitch Streamer">
+<meta property="og:description" content="HOTERYP — стример Twitch. CS2, Dota 2 и хорроры.">
+<meta property="og:url" content="https://absolute538.github.io/Hoteryp-/">
+
 <style>
-*{box-sizing:border-box}
-body {
-    margin: 0;
-    background-image: url('3e4df0a6c0091b06a2228c40ecba5d88.gif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: white;
+* {
+  box-sizing: border-box;
 }
-header{padding:80px 20px;background:linear-gradient(135deg,#170b35,#35106b,#090914)}
-h1{font-size:65px;color:#c69aff;margin:0;text-shadow:0 0 25px #923cff}
-p{color:#ccc;line-height:1.7}
-section{padding:45px 20px}
-h2{color:#c69aff}
-.games{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
-.game{background:#191329;padding:20px 30px;border:1px solid #793ac4;border-radius:14px}
-a{display:inline-block;margin:10px;padding:15px 25px;border-radius:10px;text-decoration:none;font-weight:bold}
-.twitch{background:#9147ff;color:white}
-.telegram{background:#229ed9;color:white}
-footer{padding:25px;color:#777}
-</style>
-    .reveal {
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #090914 url('./3e4df0a6c0091b06a2228c40ecba5d88.gif') center/cover fixed no-repeat;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #170b35dd, #35106bdd, #090914dd);
+}
+
+h1 {
+  font-size: clamp(42px, 10vw, 65px);
+  color: #c69aff;
+  margin: 0;
+  animation: neon 2s infinite alternate;
+}
+
+@keyframes neon {
+  from { text-shadow: 0 0 5px #a020f0; }
+  to { text-shadow: 0 0 35px #ff00ff; }
+}
+
+p {
+  color: #ddd;
+  line-height: 1.7;
+}
+
+section {
+  padding: 45px 20px;
+  text-align: center;
+  background: #090914cc;
+  margin: 15px 0;
+}
+
+h2 {
+  color: #c69aff;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.game {
+  background: #191329;
+  padding: 20px 30px;
+  border: 1px solid #793ac4;
+  border-radius: 14px;
+}
+
+a {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s ease;
+}
+
+a:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px #bf00ff);
+}
+
+.twitch {
+  background: #9147ff;
+  color: white;
+}
+
+.telegram {
+  background: #229ed9;
+  color: white;
+}
+
+footer {
+  padding: 25px;
+  color: #ddd;
+  text-align: center;
+  background: #090914cc;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gif-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reveal {
   opacity: 0;
   transform: translateY(35px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity .8s ease, transform .8s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
-    
-</head>  
-<meta property="og:type" content="website">
-<meta property="og:title" content="HOTERYP — Twitch Streamer">
-<meta property="og:description" content="HOTERYP — стример Twitch. CS2, Dota 2 и хорроры.">
-<meta property="og:url" content="https://absolute538.github.io/Hoteryp-/">
-<meta name="robots" content="index, follow">
-<meta name="author" content="HOTERYP">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "HOTERYP",
-  "description": "Twitch-стример. Играет в CS2, Dota 2 и хорроры.",
-  "url": "https://absolute538.github.io/Hoteryp-/",
-  "sameAs": [
-    "https://twitch.tv/hoteryp",
-    "https://t.me/nixsois_nx"
-  ]
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
-</script>
-  
+</style>
+</head>
+
 <body>
+
 <header>
-<h1 class="reveal">HOTERYP</h1>
-<p>Добро пожаловать на официальный сайт стримера HOTERYP!</p>
-<a class="twitch" href="https://twitch.tv/hoteryp">Смотреть на Twitch</a>
-<a class="telegram" href="https://t.me/nixsois_nx">Telegram</a>
-</header>
-<section>
-<h2>Кто такой HOTERYP?</h2>
-<p>HOTERYP — Twitch-стример, который играет в любимые игры, общается со зрителями и создаёт атмосферу на трансляциях.</p>
-</section>
-<section>
-<h2>Во что играет HOTERYP?</h2>
-<div class="games">
-<div class="game">Counter-Strike 2</div>
-<div class="game">Dota 2</div>
-<div class="game">Хорроры</div>
-</div>
-</section>
-<footer>© 2026 HOTERYP. Все права защищены.</footer>
-  <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
-  <img src="./2e41682040fae81daab963e3554ab60d.gif"
-       alt="HOTERYP"
-       width="300"
-       style="display: block; max-width: 100%; height: auto;">
+  <h1 class="reveal">HOTERYP</h1>
+  <p class="reveal">Добро пожаловать на официальный сайт стримера HOTERYP!</p>
+  <div class="reveal">
+    <a class="twitch" href="https://twitch.tv/hoteryp">Смотреть на Twitch</a>
+    <a class="telegram" href="https://t.me/nixsois_nx">Telegram</a>
   </div>
-</body>
-    <script>
-document.querySelectorAll('.reveal').forEach(el => {
-  setTimeout(() => el.classList.add('active'), 200);
-});
-    </script>
-    <script>
+</header>
+
+<section class="reveal">
+  <h2>Кто такой HOTERYP?</h2>
+  <p>HOTERYP — Twitch-стример, который играет в любимые игры, общается со зрителями и создаёт атмосферу на трансляциях.</p>
+</section>
+
+<section class="reveal">
+  <h2>Во что играет HOTERYP?</h2>
+  <div class="games">
+    <div class="game">Counter-Strike 2</div>
+    <div class="game">Dota 2</div>
+    <div class="game">Хорроры</div>
+  </div>
+</section>
+
+<footer class="reveal">
+  © 2026 HOTERYP. Все права защищены.
+</footer>
+
+<div class="gif-container reveal">
+  <img src="./2e41682040fae81daab963e3554ab60d.gif"
+       alt="HOTERYP" width="300">
+</div>
+
+<script>
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("active");
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
     }
   });
-});
+}, { threshold: 0.1 });
 
-document.querySelectorAll(".reveal").forEach(el => {
+document.querySelectorAll('.reveal').forEach(el => {
   observer.observe(el);
 });
-    </script>
-  <style>
-/* Неоновое свечение HOTERYP */
-h1 {
-  animation: neon 2s infinite alternate;
-}
+</script>
 
-@keyframes neon {
-  from {
-    text-shadow: 0 0 5px #a020f0,
-                 0 0 15px #a020f0;
-  }
-  to {
-    text-shadow: 0 0 15px #a020f0,
-                 0 0 35px #ff00ff;
-  }
-}
-
-/* Плавное появление */
-body {
-  margin: 0;
-  min-height: 100vh;
-
-  background-image: url("./3e4df0a6c0091b06a2228c40ecba5d88.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  animation: appear 1.5s ease;
-}
-
-@keyframes appear {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Плавные кнопки */
-button, a {
-  transition: 0.3s ease;
-}
-
-button:hover, a:hover {
-  filter: drop-shadow(0 0 10px #bf00ff);
-  transform: scale(1.05);
-}
-  </style>
+</body>
 </html>
