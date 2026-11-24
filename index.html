@@ -65,4 +65,41 @@ footer{padding:25px;color:#777}
 <footer>© 2026 HOTERYP. Все права защищены.</footer>
   <img src="./2e41682040fae81daab963e3554ab60d.gif" alt="HOTERYP" width="300">
 </body>
+  <style>
+/* Неоновое свечение HOTERYP */
+h1 {
+  animation: neon 2s infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 5px #a020f0,
+                 0 0 15px #a020f0;
+  }
+  to {
+    text-shadow: 0 0 15px #a020f0,
+                 0 0 35px #ff00ff;
+  }
+}
+
+/* Плавное появление */
+body {
+  animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Плавные кнопки */
+button, a {
+  transition: 0.3s ease;
+}
+
+button:hover, a:hover {
+  filter: drop-shadow(0 0 10px #bf00ff);
+  transform: scale(1.05);
+}
+  </style>
 </html>
