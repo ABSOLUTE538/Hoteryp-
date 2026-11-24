@@ -29,6 +29,16 @@ a{display:inline-block;margin:10px;padding:15px 25px;border-radius:10px;text-dec
 .telegram{background:#229ed9;color:white}
 footer{padding:25px;color:#777}
 </style>
+    .reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 </head>  
 <meta property="og:type" content="website">
 <meta property="og:title" content="HOTERYP — Twitch Streamer">
@@ -53,7 +63,7 @@ footer{padding:25px;color:#777}
   
 <body>
 <header>
-<h1>HOTERYP</h1>
+<h1 class="reveal">HOTERYP</h1>
 <p>Добро пожаловать на официальный сайт стримера HOTERYP!</p>
 <a class="twitch" href="https://twitch.tv/hoteryp">Смотреть на Twitch</a>
 <a class="telegram" href="https://t.me/nixsois_nx">Telegram</a>
@@ -78,6 +88,19 @@ footer{padding:25px;color:#777}
        style="display: block; max-width: 100%; height: auto;">
   </div>
 </body>
+    <script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+    </script>
   <style>
 /* Неоновое свечение HOTERYP */
 h1 {
